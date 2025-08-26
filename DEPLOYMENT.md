@@ -34,22 +34,31 @@ This guide will help you deploy your data tracker app to Google Cloud Platform (
 3. Note your Project ID (usually something like `stillraining-tracker-123456`)
 4. Enable the following APIs:
    - Cloud Run API
-   - Container Registry API
+   - Artifact Registry API
    - Cloud Build API
 
-### 4. Create Service Account
+### 4. Create Artifact Registry Repository
+
+1. In GCP Console, go to Artifact Registry
+2. Click "Create Repository"
+3. Name: `stillraining-tracker`
+4. Format: Docker
+5. Location: `us-central1` (same as Cloud Run region)
+6. Click "Create"
+
+### 5. Create Service Account
 
 1. In GCP Console, go to IAM & Admin > Service Accounts
 2. Click "Create Service Account"
 3. Name: `github-actions-deploy`
 4. Grant these roles:
    - Cloud Run Admin
+   - Artifact Registry Writer
    - Storage Admin
-   - Container Registry Service Agent
 5. Create and download the JSON key file
 6. Copy the entire contents of the JSON file
 
-### 5. Configure GitHub Secrets
+### 6. Configure GitHub Secrets
 
 In your GitHub repository, go to Settings > Secrets and variables > Actions, and add these secrets:
 
