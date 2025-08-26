@@ -43,7 +43,7 @@ This guide will help you deploy your data tracker app to Google Cloud Platform (
 2. Click "Create Repository"
 3. Name: `stillraining-tracker`
 4. Format: Docker
-5. Location: `us-central1` (same as Cloud Run region)
+5. Location: `australia-southeast1` (same as Cloud Run region)
 6. Click "Create"
 
 ### 5. Create Service Account
