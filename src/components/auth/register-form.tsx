@@ -76,7 +76,7 @@ export function RegisterForm() {
       setTimeout(() => {
         router.push("/login");
       }, 2000);
-    } catch (err) {
+    } catch {
       setError("Registration failed. Please try again.");
     } finally {
       setIsLoading(false);
